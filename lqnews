@@ -42,14 +42,17 @@ For more information, please refer to <http://unlicense.org>
 
 
 import feedparser
+import HTMLParser
 
 
 try:
   feed = feedparser.parse('http://feeds.feedburner.com/linuxquestions/lqnews')
+  h = HTMLParser.HTMLParser()
   for i in feed.entries:
-    print '\033[1;34m' + i.title + '\033[1;m' + " " + '\033[1;30m' + i.link + '\033[1;m'
+    print '\033[1;34m' + h.unescape(i.title) + '\033[1;m' + " " + '\033[1;30m' + i.link + '\033[1;m'
+  exit(0)
 except:
   print "Computer or human error..."
   print "The force is strong with you!"
-
+  exit(1)
 
