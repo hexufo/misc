@@ -1,5 +1,3 @@
-#misc
-
 This folder contains miscellaneous scripts:
 
 - lqlatest: get the latest threads from linuxquestions.org.
