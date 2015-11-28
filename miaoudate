@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+
+
+'''
+- Miaoudate v0.1 2015-11-28 by hexufo.
+
+This script miaous the current date !
+
+     /2015/11/28\
+     \  miaou ! /
+          /
+  /\_/|  /
+ ( ^.^)
+  )  (
+ /    \__.
+(_|_|____)
+
+Get the latest version here:
+https://github.com/hexufo/misc
+
+You can find me in various places on the internet:
+hexufo @ {wordpress, twitter, github, gmail}
+
+- This software is distributed under the Unlicense:
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>
+'''
+
+
+import datetime
+
+
+datenow = datetime.datetime.now()
+
+top1 = "     /"
+top2 = datenow.strftime("%Y/%m/%d")
+top3 = "\\"
+top = top1 + top2 + top3
+
+cat  = "\x20\x20\x20\x20\x20\x5c\x20\x20\x6d\x69\x61\x6f\x75\x20\x21"
+cat += "\x20\x2f\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2f\x0a"
+cat += "\x20\x20\x2f\x5c\x5f\x2f\x7c\x20\x20\x2f\x0a\x20\x28\x20\x5e"
+cat += "\x2e\x5e\x29\x0a\x20\x20\x29\x20\x20\x28\x0a\x20\x2f\x20\x20"
+cat += "\x20\x20\x5c\x5f\x5f\x2e\x0a\x28\x5f\x7c\x5f\x7c\x5f\x5f\x5f"
+cat += "\x5f\x29"
+
+
+print top
+print cat
+
+
+exit(0)
+
+
