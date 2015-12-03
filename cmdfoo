@@ -4,7 +4,7 @@
 '''
 - Cmdfoo v.alpha 2015-12-03 by hexufo.
 
-Search commandlinefu.com database from the shell using the API.
+Search commandlinefu.com database from the shell using the api.
 
 Usage:   ./cmdfoo command
 Example: ./cmdfoo ls
@@ -54,7 +54,7 @@ import urllib2
 
 def usage():
   print "Cmdfoo v.alpha 2015-12-03 by hexufo."
-  print "Search commandlinefu.com database from the shell using the API."
+  print "Search commandlinefu.com database from the shell using the api."
   print
   print "  Usage: " + sys.argv[0] + " command"
   print "Example: " + sys.argv[0] + " ls"
