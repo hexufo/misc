@@ -11,6 +11,9 @@ This script gets the latest video titles and links from the
 (http://www.youtube.com/user/myvideoisonutube),
 without using the youtube api.
 
+Adafruit, eevblog and elnmore are the same script with
+different channel url.
+
 Get the latest version here:
 https://github.com/hexufo/misc
 
