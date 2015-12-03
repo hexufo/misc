@@ -1,0 +1,81 @@
+#!/usr/bin/python
+
+
+'''
+- Xkcdrnd v.0.1 2015-12-03 by hexufo.
+
+Get a random comic from http://xkcd.com/ !
+
+Get the latest version here:
+https://github.com/hexufo/misc
+
+You can find me in various places on the internet:
+hexufo @ {wordpress, twitter, github, gmail}
+
+- This software is distributed under the Unlicense:
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>
+'''
+
+
+import random
+import urllib2
+import re
+
+
+try:
+  # 2015-12-03: 1 to 1611
+  rnd = random.randint(1,1611)
+  pageurl  = "http://xkcd.com/"
+  pageurl += str(rnd)
+  pageurl += "/"
+  print pageurl
+
+  req01 = urllib2.Request(pageurl)
+  response = urllib2.urlopen(req01)
+  htmlpage = response.read()
+
+  search = re.findall('http...imgs.xkcd.com.comics.*', htmlpage)
+  imgurl = search[0]
+  print imgurl
+
+  req02 = urllib2.Request(imgurl)
+  response = urllib2.urlopen(req02)
+  img = response.read()
+
+  imgfile = search[0][28:]
+  f = open(imgfile, 'w')
+  f.write(img)
+  f.close()
+
+except:
+  print "Error..."
+  exit(1)
+
+
+exit(0)
+
+
