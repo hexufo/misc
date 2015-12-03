@@ -88,7 +88,11 @@ if __name__ == "__main__":
   if len(sys.argv) != 2:
     usage()
   else:
-    get()
+    u = unicode(sys.argv[1])
+    if u.isnumeric():
+      usage()
+    else:
+      get()
 
   sys.exit(0)
 
