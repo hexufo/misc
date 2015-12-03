@@ -6,6 +6,8 @@
 
 This is a very short script to get the latest news from www.linuxquestions.org.
 
+Lqnews and lqlatest are the same script with different feed url.
+
 Get the latest version here:
 https://github.com/hexufo/misc
 
