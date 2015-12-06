@@ -79,8 +79,8 @@ def get():
     page = response.read()
 
     print page[:-1]
-  except:
-    print "Error..."
+  except Exception, error_message:
+    print "[-] Error: " + str(error_message)
     sys.exit(1)
 
 
