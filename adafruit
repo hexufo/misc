@@ -69,8 +69,8 @@ try:
 
   for i in range(0,len(search)):
     print blue + h.unescape(search[i][28:][:-4]) + end + " " + gray + youtube + search[i][6:][:-4][0:20] + end
-except:
-  print "Error..."
+except Exception, error_message:
+  print "[-] Error: " + str(error_message)
   exit(1)
 
 
