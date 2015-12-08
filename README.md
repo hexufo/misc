@@ -8,6 +8,7 @@ This folder contains miscellaneous scripts:
   eevblog youtube channel.
 - elnmore: get the latest video titles and links from the
   "electronics and more" youtube channel.
+- expandurl: expands shortened urls using the longurl.org api.
 - lqlatest: get the latest threads from linuxquestions.org.
 - lqnews: get the latest news from linuxquestions.org.
 - miaoudate: miaous the current date !
