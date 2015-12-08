@@ -1,0 +1,94 @@
+#!/usr/bin/python
+
+
+'''
+- Expandurl v.alpha 2015-12-08 by hexufo.
+
+Expands shortened urls using the longurl.org api.
+
+Usage:   ./expandurl url
+Example: ./expandurl http://tinyurl.com/1c2
+
+Get the latest version here:
+https://github.com/hexufo/misc
+
+You can find me in various places on the internet:
+hexufo @ {wordpress, twitter, github, gmail}
+
+- This software is distributed under the Unlicense:
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>
+'''
+
+
+import sys
+import urllib2
+
+
+def usage():
+  print "Expandurl v.alpha 2015-12-08 by hexufo."
+  print "Expands shortened urls using the longurl.org api."
+  print
+  print "  Usage: " + sys.argv[0] + " url"
+  print "Example: " + sys.argv[0] + " http://tinyurl.com/1c2"
+
+
+def get():
+  try:
+    longurl = "http://api.longurl.org/v2/expand?url="
+    u = unicode(sys.argv[1])
+    safeurl = urllib2.quote(u.encode('utf8'), safe='')
+    url  = longurl + safeurl
+
+    agent = "Expandurl v.alpha by hexufo. https://raw.githubusercontent.com/hexufo/misc/master/expandurl"
+    req = urllib2.Request(url, headers={'User-Agent': agent})
+    response = urllib2.urlopen(req)
+    reply = response.read()
+
+    print reply[56:-28]  # No xml, no json parsers. Just string slicing.
+  except Exception, error_message:
+    print "[-] Error: " + str(error_message)
+    sys.exit(1)
+
+
+if __name__ == "__main__":
+  if len(sys.argv) != 2:
+    usage()
+    sys.exit(1)
+  else:
+    if (sys.argv[1].startswith('http://') or sys.argv[1].startswith('https://')):
+      get()
+    else:
+      usage()
+      red = '\033[1;31m'
+      end = '\033[1;m'
+      print
+      print "Url must begins with " + red + "http://" + end + " or " + red + "https://" + end
+      sys.exit(1)
+
+  sys.exit(0)
+
+
