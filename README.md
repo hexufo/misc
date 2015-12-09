@@ -9,6 +9,7 @@ This folder contains miscellaneous scripts:
 - elnmore: get the latest video titles and links from the
   "electronics and more" youtube channel.
 - expandurl: expands shortened urls using the longurl.org api.
+- getexternalip: get the external ip randomly from a list of web sites.
 - lqlatest: get the latest threads from linuxquestions.org.
 - lqnews: get the latest news from linuxquestions.org.
 - miaoudate: miaous the current date !
