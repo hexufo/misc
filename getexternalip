@@ -142,7 +142,7 @@ if __name__ == "__main__":
         get("more")
       elif str(sys.argv[1]) == "evenmore":
         get("evenmore")
-      elif (str(sys.argv[1]) == "--help" or str(sys.argv[1]) == "-h"):
+      elif (str(sys.argv[1]) == "-h" or str(sys.argv[1]) == "--help"):
         usage()
       else:
         usage()
