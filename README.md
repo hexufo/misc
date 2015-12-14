@@ -14,5 +14,5 @@ This folder contains miscellaneous scripts:
 - lqnews: get the latest news from linuxquestions.org.
 - miaoudate: miaous the current date !
 - miaoutime: miaous the current time !!
-- thinklightflash: flash the IBM x41 Thinklight n times.
+- thinklightflash: flash the IBM X41 Thinklight n times.
 - xkcdrnd: get a random comic from http://xkcd.com/ !
