@@ -4,7 +4,7 @@
 '''
 - Thinklightflash v.alpha 2015-12-14 by hexufo.
 
-Flash the IBM x41 Thinklight n times.
+Flash the IBM X41 Thinklight n times.
 
 Usage:   ./thinklightflash times updelay downdelay
 Example: ./thinklightflash 5 0.3 0.3
@@ -57,7 +57,7 @@ import time
 
 def usage():
   print 'Thinklightflash v.alpha 2015-12-14 by hexufo.'
-  print 'Flash the IBM x41 Thinklight n times.'
+  print 'Flash the IBM X41 Thinklight n times.'
   print
   print 'Usage:   ' + sys.argv[0] + ' times updelay downdelay'
   print 'Example: ' + sys.argv[0] + ' 5 0.3 0.3'
