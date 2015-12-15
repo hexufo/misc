@@ -20,6 +20,8 @@ This repository contains miscellaneous scripts:
 Get the latest versions here:
 https://github.com/hexufo/misc
 
+Project page on PyPI: https://pypi.python.org/pypi/misc-scripts
+
 You can find me in various places on the internet:
 hexufo @ {wordpress, twitter, github, gmail}
 
