@@ -6,6 +6,10 @@ This repository contains miscellaneous scripts:
 - cmdfoornd: get a random command from commandlinefu.com.
 - eevblogtube: get the latest video titles and links from the
   eevblog youtube channel.
+- elilivetube: get the latest video titles and links from the
+  "eli the computer guy live" youtube channel.
+- elitube: get the latest video titles and links from the
+  "eli the computer guy" youtube channel.
 - elnmore: get the latest video titles and links from the
   "electronics and more" youtube channel.
 - expandurl: expands shortened urls using the longurl.org api.
