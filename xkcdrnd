@@ -49,8 +49,8 @@ import re
 
 
 try:
-  # 2015-12-11: 1 to 1615
-  rnd = random.randint(1,1615)
+  # 2015-12-23: 1 to 1620
+  rnd = random.randint(1,1620)
   pageurl  = "http://xkcd.com/"
   pageurl += str(rnd)
   pageurl += "/"
