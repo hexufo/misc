@@ -14,6 +14,7 @@ This repository contains miscellaneous scripts:
   "electronics and more" youtube channel.
 - expandurl: expands shortened urls using the longurl.org api.
 - getexternalip: get the external ip randomly from a list of web sites.
+- github-random-avatar: download a random avatar image from github.
 - lqlatest: get the latest threads from linuxquestions.org.
 - lqnews: get the latest news from linuxquestions.org.
 - miaoudate: miaous the current date !
