@@ -3,6 +3,7 @@ This repository contains miscellaneous scripts:
 - cmdfoo: search commandlinefu.com database from the shell using the api.
 - cmdfoornd: get a random command from commandlinefu.com.
 - expandurl: expands shortened urls using the longurl.org api.
+- get-private-IP4s: Get all private - "internal" IPv4 addresses of your pc.
 - getexternalip: get the external ip randomly from a list of web sites.
 - github-random-avatar: download a random avatar image from github.
 - lqlatest: get the latest threads from linuxquestions.org.
