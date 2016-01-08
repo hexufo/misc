@@ -1,17 +1,7 @@
 This repository contains miscellaneous scripts:
 
-- adatube: get the latest video titles and links from the
-  adafruit youtube channel.
 - cmdfoo: search commandlinefu.com database from the shell using the api.
 - cmdfoornd: get a random command from commandlinefu.com.
-- eevblogtube: get the latest video titles and links from the
-  eevblog youtube channel.
-- elilivetube: get the latest video titles and links from the
-  "eli the computer guy live" youtube channel.
-- elitube: get the latest video titles and links from the
-  "eli the computer guy" youtube channel.
-- elnmore: get the latest video titles and links from the
-  "electronics and more" youtube channel.
 - expandurl: expands shortened urls using the longurl.org api.
 - getexternalip: get the external ip randomly from a list of web sites.
 - github-random-avatar: download a random avatar image from github.
