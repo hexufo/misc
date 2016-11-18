@@ -2,7 +2,7 @@
 
 
 '''
-- Xkcdrnd v.0.1 2016-09-08 by hexufo.
+- Xkcdrnd v.0.1 2016-11-18 by hexufo.
 
 Get a random comic from http://xkcd.com/ !
 
@@ -50,7 +50,7 @@ import re
 
 try:
   # 2016-09-08: 1 to 1730
-  rnd = random.randint(1,1730)
+  rnd = random.randint(1,1761)
   pageurl  = "http://xkcd.com/"
   pageurl += str(rnd)
   pageurl += "/"
