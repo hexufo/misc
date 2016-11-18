@@ -51,11 +51,12 @@ import urllib2
 
 
 def usage():
+  scriptname = os.path.basename(sys.argv[0])
   print "Expandurl v.alpha 2015-12-08 by hexufo."
   print "Expands shortened urls using the longurl.org api."
   print
-  print "  Usage: " + sys.argv[0] + " url"
-  print "Example: " + sys.argv[0] + " http://tinyurl.com/1c2"
+  print "  Usage: " + scriptname + " url"
+  print "Example: " + scriptname + " http://tinyurl.com/1c2"
 
 
 def get():
