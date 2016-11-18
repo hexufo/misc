@@ -52,6 +52,7 @@ For more information, please refer to <http://unlicense.org>
 
 
 import sys
+import os
 from random import randrange
 import urllib2
 import re
