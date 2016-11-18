@@ -2,7 +2,7 @@
 
 
 '''
-- Cmdfoo v.alpha 2015-12-03 by hexufo.
+- Cmdfoo v.alpha 2016-11-18 by hexufo.
 
 Search commandlinefu.com database from the shell using the api.
 
@@ -52,6 +52,7 @@ For more information, please refer to <http://unlicense.org>
 import sys
 import os
 import base64
+from random import randrange
 import urllib2
 
 
@@ -69,6 +70,13 @@ def usage():
   sys.exit(1)
 
 
+useragents = [
+  'curl/7.10.x (i386-redhat-linux-gnu) libcurl/7.10.x OpenSSL/0.9.7a ipv6 zlib/1.1.4',
+  'curl/7.7.x (i386--freebsd4.3) libcurl 7.7.x (SSL 0.9.6) (ipv6 enabled)',
+  'curl/7.8 (i686-pc-linux-gnu) libcurl 7.8 (OpenSSL 0.9.6)',
+  'curl/7.9.x (win32) libcurl 7.9.x']
+
+
 def get():
   start = "http://www.commandlinefu.com/commands/matching/"
   command = sys.argv[1]
@@ -78,7 +86,9 @@ def get():
   urlcmdfoo = start + command + "/" + commandbase64 + end
 
   try:
-    req = urllib2.Request(urlcmdfoo)
+    agentrnd = randrange(0,len(useragents))
+    # req = urllib2.Request(urlcmdfoo) # 2016-11-18: This used to work fine. Now they require curl ? Why ?
+    req = urllib2.Request(urlcmdfoo, headers={'User-Agent': useragents[agentrnd]}) # Ok. I am curl...
     response = urllib2.urlopen(req)
     page = response.read()
 
