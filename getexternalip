@@ -93,11 +93,12 @@ servers = ['http://checkmyip.com/', 'http://cmyip.com/', 'http://icanhazip.com/'
 
 
 def usage():
+  scriptname = os.path.basename(sys.argv[0])
   print "Getexternalip v.alpha 2015-12-09 by hexufo."
   print
   print "Get the external ip randomly from a list of web sites."
   print
-  print "Usage: " + sys.argv[0] + " option"
+  print "Usage: " + scriptname + " option"
   print
   print "If your run the script without the option it returns just the ip."
   print
