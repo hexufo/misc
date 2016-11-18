@@ -58,11 +58,12 @@ import time
 
 
 def usage():
+  scriptname = os.path.basename(sys.argv[0])
   print 'Thinklightflash v.alpha 2015-12-14 by hexufo.'
   print 'Flash the IBM X41 Thinklight n times.'
   print
-  print 'Usage:   ' + sys.argv[0] + ' times updelay downdelay'
-  print 'Example: ' + sys.argv[0] + ' 5 0.3 0.3'
+  print 'Usage:   ' + scriptname + ' times updelay downdelay'
+  print 'Example: ' + scriptname + ' 5 0.3 0.3'
   print 'Flashes 5 times, 0.3 seconds the led stays on and 0.3 seconds stays off.'
   print
   print 'You need root privileges to run this script.'
