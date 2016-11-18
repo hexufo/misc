@@ -50,6 +50,7 @@ For more information, please refer to <http://unlicense.org>
 
 
 import sys
+import os
 import base64
 import urllib2
 
