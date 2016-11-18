@@ -58,7 +58,7 @@ import urllib2
 
 def usage():
   scriptname = os.path.basename(sys.argv[0])
-  print "Cmdfoo v.alpha 2015-12-03 by hexufo."
+  print "Cmdfoo v.alpha 2016-11-18 by hexufo."
   print "Search commandlinefu.com database from the shell using the api."
   print
   print "  Usage: " + scriptname + " command"
