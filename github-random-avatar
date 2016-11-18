@@ -53,10 +53,11 @@ import urllib2
 
 
 def usage():
+  scriptname = os.path.basename(sys.argv[0])
   print "Github-random-avatar v.alpha 2015-12-31 by hexufo."
   print "Download a random avatar image from github."
   print
-  print "Usage: " + sys.argv[0] + " number     - Get n avatars from github."
+  print "Usage: " + scriptname + " number     - Get n avatars from github."
   print
   print "If no number is supplied, it will download just one avatar."
 
